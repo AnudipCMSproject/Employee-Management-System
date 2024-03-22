@@ -1,0 +1,16 @@
+.login-section{
+    height: 55vh;
+    align-content: center;
+}
+.login-card{
+    width: 450px;
+    align-content: center;
+
+}
+input::placeholder{
+color: var(--secondary-light);
+
+}
+.card-header{
+background-color: var(--secondary-light);
+}

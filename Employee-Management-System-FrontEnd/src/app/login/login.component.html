@@ -1,0 +1,26 @@
+<div class="container-fluid login-section d-flex justify-content-center-align-items-center"style="margin-left:270px">
+    <div class="card login-card p-2 shadow-lg">
+        <div class="card-header p-3">
+        Login
+        </div>
+        <div class="card-body">
+<form [formGroup]="loginForm">
+    <div class="row">
+        <div class="col-xl-12 mb-1">
+            <label for="email" class="form-label" form-controlName="email">E-mail</label><br>
+            <input type="text" class="form-control"id="email"autocomplete="email"><br>
+       
+            <label for="password" class="form-label" form-controlName="password">Password</label><br>
+            <input type="password" class="form-control"id="password"autocomplete="password"><br>
+        </div>
+    </div>
+
+</form>
+        </div>
+        <div class="card-footer">
+            <button class="btn btn-primary flex-end"(click)="OnLogin()">
+                Login
+            </button>
+        </div>
+    </div>
+</div>
