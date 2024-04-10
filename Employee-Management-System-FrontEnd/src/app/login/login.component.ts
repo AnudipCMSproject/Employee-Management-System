@@ -18,27 +18,22 @@ constructor(private router:Router){
 ngOnInit():void{
 this.setForm();
 }
-setForm() {
+
+      setForm() {
   this.loginForm = new FormGroup({
-    email: new FormControl('bansalbhawna117@gmail.com', [Validators.required, Validators.email]),
-    password: new FormControl('123456', [Validators.required])
+    email: new FormControl([Validators.required, Validators.email]),
+    password: new FormControl([Validators.required])
   });
 }
 
 OnLogin() {
+  console.log(this.loginForm.valid);
   if (this.loginForm.valid) {
-    const email = this.loginForm.get('email')?.value;
-    const password = this.loginForm.get('password')?.value;
+    this.router.navigate(['/employees']);
+    console.log("True");
 
-    if (email === 'bansalbhawna117@gmail.com' && password === '123456') {
-      console.log("Login successful");
-      // Redirect to employees page
-      this.router.navigate(['/employees']);
-    } else {
-      console.log("Invalid email or password");
-    }
-  } else {
-    console.log("Form invalid");
-  }
+}else{
+  console.log("False");
+}
 }
 }
