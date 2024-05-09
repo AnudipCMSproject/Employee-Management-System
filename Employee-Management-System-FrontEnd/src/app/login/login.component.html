@@ -4,7 +4,7 @@
         Login
         </div>
         <div class="card-body">
-<form [formGroup]="loginForm">
+<form >
     <div class="row">
         <div class="col-xl-12 mb-1">
             <label for="email" class="form-label" form-controlName="email">E-mail</label><br>
@@ -18,7 +18,7 @@
 </form>
         </div>
         <div class="card-footer">
-            <button class="btn btn-primary flex-end"(click)="OnLogin()">
+             <button class="btn btn-primary flex-end"(click)="OnLogin(email.value,password.value)" >
                 Login
             </button>
         </div>
