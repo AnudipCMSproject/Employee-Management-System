@@ -11,29 +11,18 @@ import { Router, withComponentInputBinding } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-loginForm!:FormGroup ;
+
 constructor(private router:Router){
+  }
 
-}
-ngOnInit():void{
-this.setForm();
-}
+  OnLogin(email:any,password:any){
+    if(email=="bansalbhawna117@gmail.com"&& password=="12345"){
+      this.router.navigate(['/employees']);
+      sessionStorage.setItem("LoggedIn","true");
+    }else{
+      sessionStorage.setItem("LoggedIn failed","false");
+    }
 
-      setForm() {
-  this.loginForm = new FormGroup({
-    email: new FormControl([Validators.required, Validators.email]),
-    password: new FormControl([Validators.required])
-  });
-}
-
-OnLogin() {
-  console.log(this.loginForm.valid);
-  if (this.loginForm.valid) {
-    this.router.navigate(['/employees']);
-    console.log("True");
-
-}else{
-  console.log("False");
-}
-}
+  }
+  
 }
