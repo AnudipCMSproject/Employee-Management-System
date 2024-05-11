@@ -16,13 +16,15 @@ constructor(private router:Router){
   }
 
   OnLogin(email:any,password:any){
-    if(email=="bansalbhawna117@gmail.com"&& password=="12345"){
-      this.router.navigate(['/employees']);
-      sessionStorage.setItem("LoggedIn","true");
-    }else{
-      sessionStorage.setItem("LoggedIn failed","false");
+    if (emailid=='example@gmail.com' && password=="123") {
+  
+    sessionStorage.setItem("isloggedIn","true");
+
+   } else {
+      sessionStorage.setItem("isloggedIn ","false");
     }
 
+  
   }
   
 }
