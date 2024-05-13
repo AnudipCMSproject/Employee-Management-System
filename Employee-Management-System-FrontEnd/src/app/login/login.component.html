@@ -5,20 +5,20 @@
         </div>
         <div class="card-body">
 <form >
-    <div class="row">
+  <div class="row">
         <div class="col-xl-12 mb-1">
-            <label for="email" class="form-label" form-controlName="email">E-mail</label><br>
-            <input type="text" class="form-control"id="email"autocomplete="email"><br>
+            <label for="email" class="form-label" forControlName="email">E-mail</label><br>
+            <input type="text" class="form-control"#txtemailid autocomplete="email"><br>
        
-            <label for="password" class="form-label" form-controlName="password">Password</label><br>
-            <input type="password" class="form-control"id="password"autocomplete="password"><br>
+            <label for="password" class="form-label" forControlName="password">Password</label><br>
+            <input type="password" class="form-control"#txtpassword autocomplete="password"><br>
         </div>
     </div>
 
 </form>
         </div>
         <div class="card-footer">
-             <button class="btn btn-primary flex-end"(click)="OnLogin(email.value,password.value)" >
+            <button class="btn btn-primary flex-end"(click)="OnLogin(txtemailid.value,txtpassword.value)" >
                 Login
             </button>
         </div>
